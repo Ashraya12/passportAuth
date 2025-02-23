@@ -33,7 +33,7 @@ class AuthServiceProvider extends ServiceProvider
         Passport::useClientModel(Client::class);
         Passport::useAuthCodeModel(AuthCode::class);
         Passport::usePersonalAccessClientModel(PersonalAccessClient::class);
-        Passport::tokensExpireIn(now()->addMinutes(1));
+        Passport::tokensExpireIn(now()->addMinutes(5));
         Passport::tokensCan([
             'super_admin' => 'Super Admin Access',
             'admin' => 'Admin Access',
